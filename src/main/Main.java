@@ -15,10 +15,18 @@ public class Main {
         for (String i : input) {
             names.add(i);
         }
+        int size = names.size();
+        int tmp;
+        while (size != 0) {
+            tmp = names.size();
+            double ran = 0 + Math.random() * (tmp);
+            String res = names.get((int)ran);
+            System.out.println(res);
+            JOptionPane.showConfirmDialog(null, res, null, JOptionPane.YES_NO_OPTION);
+            size--;
+            names.remove((int)ran);
+        }
 
-        double ran = 0 + Math.random() * (29 + 1);
-        String res = names.get((int)ran);
-        System.out.println(res);
-        JOptionPane.showConfirmDialog(null, res, null, JOptionPane.YES_NO_OPTION);
+
     }
 }
